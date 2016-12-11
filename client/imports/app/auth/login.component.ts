@@ -1,33 +1,33 @@
 import {Component, OnInit, NgZone} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Accounts } from 'meteor/accounts-base';
+import { Meteor } from 'meteor/meteor';
 
-import template from './recover.component.html';
+//noinspection TypeScriptCheckImport
+import template from './login.component.html';
 
 @Component({
-  selector: 'recover',
+  selector: 'login',
   template
 })
-export class RecoverComponent implements OnInit {
-  recoverForm: FormGroup;
+export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
   error: string;
 
   constructor(private router: Router, private zone: NgZone, private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    this.recoverForm = this.formBuilder.group({
-      email: ['', Validators.required]
+    this.loginForm = this.formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     });
 
     this.error = '';
   }
 
-  recover() {
-    if (this.recoverForm.valid) {
-      Accounts.forgotPassword({
-        email: this.recoverForm.value.email
-      }, (err) => {
+  login() {
+    if (this.loginForm.valid) {
+      Meteor.loginWithPassword(this.loginForm.value.email, this.loginForm.value.password, (err) => {
         if (err) {
           this.zone.run(() => {
             this.error = err;

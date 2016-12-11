@@ -65,6 +65,7 @@ Meteor.methods({
     if (!party.public && (!party.invited || party.invited.indexOf(this.userId) == -1))
       throw new Meteor.Error('403', 'No such party'); // its private, but let's not tell this to the user
 
+    //noinspection TypeScriptUnresolvedFunction
     let rsvpIndex = party.rsvps ? party.rsvps.findIndex((rsvp) => rsvp.userId === this.userId) : -1;
 
     if (rsvpIndex !== -1) {

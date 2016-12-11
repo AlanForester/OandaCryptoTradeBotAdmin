@@ -1,17 +1,22 @@
 <div class="md-content">
-  <div class="md-whiteframe-z2">
+  <div>
     <div class="md-primary" color="primary">
-      Sign up
+      Sign in
     </div>
 
     <div>
-      <form [formGroup]="signupForm" #f="ngForm" (ngSubmit)="signup()">
+      <div>
+        <p class="md-body-2"> Sign in with your email</p>
+      </div>
+
+      <form [formGroup]="loginForm" #f="ngForm" (ngSubmit)="login()">
 
         <input formControlName="email" type="email" placeholder="Email" />
         <input formControlName="password" type="password" placeholder="Password" />
 
         <div>
-          <button class="md-primary" type="submit" aria-label="login">Sign Up</button>
+          <a [routerLink]="['/recover']">Forgot password?</a>
+          <button class="md-primary" type="submit" aria-label="login">Sign In</button>
         </div>
       </form>
 
@@ -21,8 +26,9 @@
         </div>
       </div>
 
+
       <div>
-        <a [routerLink]="['/login']">Already a user?</a>
+        <a [routerLink]="['/signup']">Need an account?</a>
       </div>
     </div>
   </div>

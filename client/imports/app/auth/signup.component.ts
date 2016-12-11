@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Accounts } from 'meteor/accounts-base';
 
+//noinspection TypeScriptCheckImport
 import template from './signup.component.html';
 
 @Component({

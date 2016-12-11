@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { PaginationService } from 'ng2-pagination';
-import { PartiesList } from "../shared-components/parties-list.class";
 
+//noinspection TypeScriptCheckImport
 import template from './parties-list.component.html';
+//noinspection TypeScriptCheckImport
 import style from './parties-list.component.scss';
 
 @Component({
@@ -10,8 +10,7 @@ import style from './parties-list.component.scss';
   template,
   styles: [ style ]
 })
-export class PartiesListComponent extends PartiesList {
-  constructor(paginationService: PaginationService) {
-    super(paginationService);
+export class PartiesListComponent {
+  constructor() {
   }
 }

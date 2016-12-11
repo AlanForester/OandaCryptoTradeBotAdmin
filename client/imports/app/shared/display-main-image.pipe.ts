@@ -18,12 +18,8 @@ export class DisplayMainImagePipe implements PipeTransform {
     const found = Images.findOne(imageId);
 
     if (found) {
-      if (!Meteor.isCordova) {
-        imageUrl = found.url;
-      } else {
         const path = `ufs/${found.store}/${found._id}/${found.name}`;
         imageUrl = Meteor.absoluteUrl(path);
-      }
     }
 
     return imageUrl;
