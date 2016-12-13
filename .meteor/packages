@@ -15,10 +15,7 @@ standard-minifier-js@1.2.0_1    # JS minifier run for production mode
 es5-shim@4.6.14_1                # ECMAScript 5 compatibility for older browsers.
 
 angular2-compilers
-practicalmeteor:mocha
-xolvio:cleaner
 hwillson:stub-collections
-dispatch:mocha-phantomjs
 shell-server@0.2.1
 accounts-password
 tmeasday:publish-counts
@@ -26,7 +23,4 @@ check
 email
 jalik:ufs
 jalik:ufs-gridfs
-mys:accounts-phone
-mys:fonts
-launch-screen
-mobile-status-bar
+mizzao:bootstrap-3
