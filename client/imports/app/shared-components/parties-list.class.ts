@@ -1,7 +1,6 @@
 import {OnDestroy, OnInit} from "@angular/core";
 import {Observable, Subscription, Subject} from "rxjs";
 import {Party} from "../../../../both/models/party.model";
-import {PaginationService} from "ng2-pagination";
 import {MeteorObservable} from "meteor-rxjs";
 import {Parties} from "../../../../both/collections/parties.collection";
 import {Counts} from "meteor/tmeasday:publish-counts";
@@ -30,7 +29,7 @@ export class PartiesList implements OnInit, OnDestroy {
   user: Meteor.User;
   imagesSubs: Subscription;
 
-  constructor(private paginationService: PaginationService) {
+  constructor(private paginationService: any) {
 
   }
 
