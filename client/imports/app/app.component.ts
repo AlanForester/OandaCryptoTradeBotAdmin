@@ -24,10 +24,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.opts = {
-      barOpacity: "0.2",
+      barOpacity: "0.4",
       gridOpacity: "0.0",
       barWidth: "8",
-      barBackground: '#FFFFFF'
+      barBackground: '#000000'
     }
   }
 }
