@@ -6,6 +6,8 @@ import style from './app.component.scss';
 import template from './app.component.html';
 import {InjectUser} from "angular2-meteor-accounts-ui";
 
+import "metismenu";
+declare var $:JQueryStatic;
 @Component({
   selector: 'app',
   template,
@@ -28,6 +30,10 @@ export class AppComponent implements OnInit {
       gridOpacity: "0.0",
       barWidth: "8",
       barBackground: '#000000'
-    }
+    };
+
+    $('#side-menu').metisMenu();
+
   }
+
 }
