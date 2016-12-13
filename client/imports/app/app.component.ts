@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ISlimScrollOptions } from '../directives/slimscroll/slimscroll-options.class';
 //noinspection TypeScriptCheckImport
 import style from './app.component.scss';
 //noinspection TypeScriptCheckImport
@@ -12,12 +12,22 @@ import {InjectUser} from "angular2-meteor-accounts-ui";
   styles: [ style ]
 })
 @InjectUser('user')
-export class AppComponent {
+export class AppComponent implements OnInit {
+  opts: ISlimScrollOptions;
   constructor() {
 
   }
 
   logout() {
     Meteor.logout();
+  }
+
+  ngOnInit() {
+    this.opts = {
+      barOpacity: "0.2",
+      gridOpacity: "0.0",
+      barWidth: "8",
+      barBackground: '#FFFFFF'
+    }
   }
 }

@@ -1,49 +1,43 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { AccountsModule } from 'angular2-meteor-accounts-ui';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {AccountsModule} from 'angular2-meteor-accounts-ui';
 
-import { AppComponent } from "./app.component";
-import { routes, ROUTES_PROVIDERS } from './app.routes';
-import { PARTIES_DECLARATIONS } from './parties';
-import { SHARED_DECLARATIONS } from './shared';
-import { AUTH_DECLARATIONS } from "./auth/index";
+import {AppComponent} from "./app.component";
+import {routes, ROUTES_PROVIDERS} from './app.routes';
+import {PARTIES_DECLARATIONS} from './parties';
+import {SHARED_DECLARATIONS} from './shared';
+import {AUTH_DECLARATIONS} from "./auth/index";
+import {DIRECTIVES_DECLARATIONS} from "../directives/index"
 
 let moduleDefinition;
 
-if (Meteor.isCordova) {
-  moduleDefinition = {
-    declarations: [
-      ...SHARED_DECLARATIONS
-    ],
-    providers: [
-    ]
-  }
-}
-else {
-  moduleDefinition = {
+
+moduleDefinition = {
     imports: [
-      BrowserModule,
-      FormsModule,
-      ReactiveFormsModule,
-      RouterModule.forRoot(routes),
-      AccountsModule
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forRoot(routes),
+        AccountsModule
     ],
     declarations: [
-      AppComponent,
-      ...PARTIES_DECLARATIONS,
-      ...SHARED_DECLARATIONS,
-      ...AUTH_DECLARATIONS
+        AppComponent,
+        ...PARTIES_DECLARATIONS,
+        ...SHARED_DECLARATIONS,
+        ...AUTH_DECLARATIONS,
+        ...DIRECTIVES_DECLARATIONS
     ],
     providers: [
-      ...ROUTES_PROVIDERS
+        ...ROUTES_PROVIDERS
     ],
     bootstrap: [
-      AppComponent
+        AppComponent
     ]
-  }
-}
+};
+
 
 @NgModule(moduleDefinition)
-export class AppModule {}
+export class AppModule {
+}
