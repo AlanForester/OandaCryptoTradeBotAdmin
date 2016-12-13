@@ -5,7 +5,6 @@ import '../both/methods/parties.methods';
 
 Meteor.startup(() => {
   // Фиксированые левый сайд бар и верхний
-  document.body.className = "pace-done fixed-nav fixed-nav-basic fixed-sidebar";
   const platform = platformBrowserDynamic();
   platform.bootstrapModule(AppModule);
 });
