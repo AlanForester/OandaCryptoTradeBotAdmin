@@ -9,7 +9,8 @@ import {routes, ROUTES_PROVIDERS} from './app.routes';
 import {PARTIES_DECLARATIONS} from './parties';
 import {SHARED_DECLARATIONS} from './shared';
 import {AUTH_DECLARATIONS} from "./auth/index";
-import {DIRECTIVES_DECLARATIONS} from "../directives/index"
+import {DIRECTIVES_DECLARATIONS} from "../directives/index";
+import {PanelComponent} from "./panel/penel.component"
 
 let moduleDefinition;
 
@@ -27,7 +28,8 @@ moduleDefinition = {
         ...PARTIES_DECLARATIONS,
         ...SHARED_DECLARATIONS,
         ...AUTH_DECLARATIONS,
-        ...DIRECTIVES_DECLARATIONS
+        ...DIRECTIVES_DECLARATIONS,
+        PanelComponent
     ],
     providers: [
         ...ROUTES_PROVIDERS
