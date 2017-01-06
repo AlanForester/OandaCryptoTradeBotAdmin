@@ -13,6 +13,7 @@ import {DIRECTIVES_DECLARATIONS} from "../directives/index";
 import {PanelComponent} from "./panel/panel.component";
 import {MainComponent} from "./main/main.component"
 import {LeftmenuComponent} from "./panel/leftmenu/leftmenu.component";
+import {ToolbarComponent} from "./panel/toolbar/toolbar.component";
 
 let moduleDefinition;
 
@@ -32,7 +33,8 @@ moduleDefinition = {
         ...DIRECTIVES_DECLARATIONS,
         PanelComponent,
         MainComponent,
-        LeftmenuComponent
+        LeftmenuComponent,
+        ToolbarComponent
     ],
     providers: [
         ...ROUTES_PROVIDERS
