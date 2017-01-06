@@ -6,11 +6,12 @@ import {AccountsModule} from 'angular2-meteor-accounts-ui';
 
 import {AppComponent} from "./app.component";
 import {routes, ROUTES_PROVIDERS} from './app.routes';
-import {PARTIES_DECLARATIONS} from './parties';
+
 import {SHARED_DECLARATIONS} from './shared';
 import {AUTH_DECLARATIONS} from "./auth/index";
 import {DIRECTIVES_DECLARATIONS} from "../directives/index";
-import {PanelComponent} from "./panel/penel.component"
+import {PanelComponent} from "./panel/penel.component";
+import {MainComponent} from "./main/main.component"
 
 let moduleDefinition;
 
@@ -25,11 +26,11 @@ moduleDefinition = {
     ],
     declarations: [
         AppComponent,
-        ...PARTIES_DECLARATIONS,
         ...SHARED_DECLARATIONS,
         ...AUTH_DECLARATIONS,
         ...DIRECTIVES_DECLARATIONS,
-        PanelComponent
+        PanelComponent,
+        MainComponent
     ],
     providers: [
         ...ROUTES_PROVIDERS
