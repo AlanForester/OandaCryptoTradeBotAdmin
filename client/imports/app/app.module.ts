@@ -10,8 +10,9 @@ import {routes, ROUTES_PROVIDERS} from './app.routes';
 import {SHARED_DECLARATIONS} from './shared';
 import {AUTH_DECLARATIONS} from "./auth/index";
 import {DIRECTIVES_DECLARATIONS} from "../directives/index";
-import {PanelComponent} from "./panel/penel.component";
+import {PanelComponent} from "./panel/panel.component";
 import {MainComponent} from "./main/main.component"
+import {LeftmenuComponent} from "./panel/leftmenu/leftmenu.component";
 
 let moduleDefinition;
 
@@ -30,7 +31,8 @@ moduleDefinition = {
         ...AUTH_DECLARATIONS,
         ...DIRECTIVES_DECLARATIONS,
         PanelComponent,
-        MainComponent
+        MainComponent,
+        LeftmenuComponent
     ],
     providers: [
         ...ROUTES_PROVIDERS
