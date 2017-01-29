@@ -15,7 +15,8 @@
     "node_modules"
   ],
   "files": [
-    "typings.d.ts"
+    "typings.d.ts",
+    "null"
   ],
   "compileOnSave": false,
   "angularCompilerOptions": {

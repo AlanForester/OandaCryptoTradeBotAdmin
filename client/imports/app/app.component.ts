@@ -15,7 +15,7 @@ declare var $:JQueryStatic;
     styles: [ style ]
 })
 @InjectUser('user')
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent {
     //opts: ISlimScrollOptions;
     constructor() {
 
