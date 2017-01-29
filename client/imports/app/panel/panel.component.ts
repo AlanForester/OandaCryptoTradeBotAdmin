@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {Component, OnInit, AfterViewInit} from '@angular/core';
 //noinspection TypeScriptCheckImport
 import style from './panel.component.scss';
 //noinspection TypeScriptCheckImport
@@ -8,11 +8,11 @@ import {InjectUser} from "angular2-meteor-accounts-ui";
 import "metismenu";
 import "jquery-slimscroll"
 
-declare var $:JQueryStatic;
+declare var $: JQueryStatic;
 @Component({
     selector: 'app',
     template,
-    styles: [ style ]
+    styles: [style]
 })
 @InjectUser('user')
 export class PanelComponent implements OnInit, AfterViewInit {
