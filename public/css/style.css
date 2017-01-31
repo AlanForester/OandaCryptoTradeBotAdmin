@@ -38,6 +38,43 @@ h5 {
   margin-top: 5px;
   font-weight: 600;
 }
+.logo-in-menu {
+  height: 60px;
+  width: 100%;
+  background-color: #293846;
+  text-align: center;
+  color:#a7b1c2;
+  font-size: 48px;
+  font-family: Optima
+}
+.iqfx-configuration-not-selected-text {
+  width: 100%;
+  height: 100%;
+  margin-top: 15%;
+  text-align: center;
+  font-weight: 600;
+  color: #1b6d85;
+  font-size: 40px;
+}
+
+.selected-configuration {
+  color: #0e9aef;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px dashed  #0e9aef;
+  font-style: italic;
+  display: inline;
+}
+
+.selected-workplace {
+  color: #0e9aef;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px dashed  #0e9aef;
+  font-style: italic;
+  display: inline;
+}
+
 .nav > li > a {
   color: #a7b1c2;
   font-weight: 600;
@@ -162,6 +199,7 @@ h5 {
 .nav-header {
   padding: 33px 25px;
   background: url("patterns/header-profile.png") no-repeat;
+  box-shadow: 0px 15px 8px -3px rgba(41,56,70, 1) inset;
 }
 .pace-done .nav-header {
   transition: all 0.4s;
@@ -7852,7 +7890,7 @@ body.md-skin {
 .md-skin a.close-canvas-menu {
   color: #ffffff;
 }
-.md-skin .welcome-message {
+.md-skin .configurations-select {
   color: #ffffff;
   font-weight: 300;
 }
@@ -8213,12 +8251,7 @@ body.md-skin {
     display: inline-block;
   }
 }
-/* Only demo */
-@media (max-width: 1000px) {
-  .welcome-message {
-    display: none;
-  }
-}
+
 @media print {
   nav.navbar-static-side {
     display: none;
