@@ -1,3 +1,1 @@
-export const DIRECTIVES_DECLARATIONS: any[] = [
-
-];
+export const DIRECTIVES_DECLARATIONS: any[] = [];
