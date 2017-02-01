@@ -102,6 +102,15 @@
     <div class="row wrapper border-bottom white-bg page-heading">
       <div class="col-sm-12">
         <h2>Сводная информация по проекту</h2>
+        <div class="pull-right">
+          <div class="btn-group">
+            <button type="button" class="btn btn-xs btn-white active">Дневная</button>
+            <button type="button" class="btn btn-xs btn-white">Недельная</button>
+            <button type="button" class="btn btn-xs btn-white">Месячная</button>
+            <button type="button" class="btn btn-xs btn-white">Годовая</button>
+            <button type="button" class="btn btn-xs btn-white">Полная</button>
+          </div>
+        </div>
         <ol class="breadcrumb">
           <li>
             <a href="index.html">Проекты</a>
@@ -224,9 +233,6 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <div class="small pull-left col-md-3 m-l-lg m-t-md">
-              <strong>График</strong> котировок и сигналов.
-            </div>
             <div class="flot-chart m-b-xl">
               <div class="flot-chart-content" id="flot-dashboard5-chart" style="padding: 0px; position: relative;">
                 <canvas class="flot-base" width="806" height="200"
@@ -295,213 +301,68 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <div class="ibox">
-              <h4>Сигнальные паттерны</h4>
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                <h5>Сигнальные паттерны</h5>
+              </div>
               <div class="ibox-content">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label class="control-label" for="product_name">Project Name</label>
-                      <input type="text" id="product_name" name="product_name" value="" placeholder="Project Name"
-                             class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label class="control-label" for="price">Name</label>
-                      <input type="text" id="price" name="price" value="" placeholder="Name" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label class="control-label" for="quantity">Company</label>
-                      <input type="text" id="quantity" name="quantity" value="" placeholder="Company"
-                             class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label class="control-label" for="status">Status</label>
-                      <select name="status" id="status" class="form-control">
-                        <option value="1" selected="">Completed</option>
-                        <option value="0">Pending</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="table-responsive">
-                  <table class="table table-striped">
-
-                    <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Master project</td>
-                      <td>Patrick Smith</td>
-                      <td>$892,074</td>
-                      <td>Inceptos Hymenaeos Ltd</td>
-                      <td><strong>20%</strong></td>
-                      <td>Jul 14, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Alpha project</td>
-                      <td>Alice Jackson</td>
-                      <td>$963,486</td>
-                      <td>Nec Euismod In Company</td>
-                      <td><strong>40%</strong></td>
-                      <td>Jul 16, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Betha project</td>
-                      <td>John Smith</td>
-                      <td>$996,824</td>
-                      <td>Erat Volutpat</td>
-                      <td><strong>75%</strong></td>
-                      <td>Jul 18, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Gamma project</td>
-                      <td>Anna Jordan</td>
-                      <td>$105,192</td>
-                      <td>Tellus Ltd</td>
-                      <td><strong>18%</strong></td>
-                      <td>Jul 22, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Alpha project</td>
-                      <td>Alice Jackson</td>
-                      <td>$674,803</td>
-                      <td>Nec Euismod In Company</td>
-                      <td><strong>40%</strong></td>
-                      <td>Jul 16, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Master project</td>
-                      <td>Patrick Smith</td>
-                      <td>$174,729</td>
-                      <td>Inceptos Hymenaeos Ltd</td>
-                      <td><strong>20%</strong></td>
-                      <td>Jul 14, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Seq.</th>
+                    <th>Длит.</th>
+                    <th>Тренд</th>
+                    <th>Call/Put(All)</th>
+                    <th>Сигналов</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><a href="javascript:return false">32423</a></td>
+                    <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                    <td>800c</td>
+                    <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
+                    <td><span class="text-navy">2</span>/<span class="text-danger">2</span> (4)</td>
+                    <td>8</td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="ibox">
-              <h4>Последние сигналы</h4>
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                <h5>Последние сигналы</h5>
+              </div>
               <div class="ibox-content">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label class="control-label" for="product_name">Project Name</label>
-                      <input type="text" id="product_name" name="product_name" value="" placeholder="Project Name"
-                             class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label class="control-label" for="price">Name</label>
-                      <input type="text" id="price" name="price" value="" placeholder="Name" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label class="control-label" for="quantity">Company</label>
-                      <input type="text" id="quantity" name="quantity" value="" placeholder="Company"
-                             class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label class="control-label" for="status">Status</label>
-                      <select name="status" id="status" class="form-control">
-                        <option value="1" selected="">Completed</option>
-                        <option value="0">Pending</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Master project</td>
-                      <td>Patrick Smith</td>
-                      <td>$892,074</td>
-                      <td>Inceptos Hymenaeos Ltd</td>
-                      <td><strong>20%</strong></td>
-                      <td>Jul 14, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Alpha project</td>
-                      <td>Alice Jackson</td>
-                      <td>$963,486</td>
-                      <td>Nec Euismod In Company</td>
-                      <td><strong>40%</strong></td>
-                      <td>Jul 16, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Betha project</td>
-                      <td>John Smith</td>
-                      <td>$996,824</td>
-                      <td>Erat Volutpat</td>
-                      <td><strong>75%</strong></td>
-                      <td>Jul 18, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Gamma project</td>
-                      <td>Anna Jordan</td>
-                      <td>$105,192</td>
-                      <td>Tellus Ltd</td>
-                      <td><strong>18%</strong></td>
-                      <td>Jul 22, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Alpha project</td>
-                      <td>Alice Jackson</td>
-                      <td>$674,803</td>
-                      <td>Nec Euismod In Company</td>
-                      <td><strong>40%</strong></td>
-                      <td>Jul 16, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Master project</td>
-                      <td>Patrick Smith</td>
-                      <td>$174,729</td>
-                      <td>Inceptos Hymenaeos Ltd</td>
-                      <td><strong>20%</strong></td>
-                      <td>Jul 14, 2015</td>
-                      <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <table class="table table-striped">
+                  <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Seq.</th>
+                    <th>Патт.</th>
+                    <th>Создан</th>
+                    <th>Длит.</th>
+                    <th>Измен.</th>
+                    <th>Рез.</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                    <td><a href="javascript:return false">32423</a></td>
+                    <td>11:39</td>
+                    <td>360c</td>
+                    <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
+                    <td><i class="fa fa-check text-navy"></i></td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -529,6 +390,9 @@
 <!-- Custom and plugin javascript -->
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
+<!-- Peity -->
+<script src="js/plugins/peity/jquery.peity.min.js"></script>
+<script src="js/demo/peity-demo.js"></script>
 
 <!-- Sparkline -->
 <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
@@ -573,47 +437,117 @@
     sparklineCharts();
 
 
-    var data1 = [
-      [0, 4], [1, 8], [2, 5], [3, 10], [4, 4], [5, 16], [6, 5], [7, 11], [8, 6], [9, 11], [10, 20], [11, 10], [12, 13], [13, 4], [14, 7], [15, 8], [16, 12]
-    ];
     var data2 = [
-      [0, 0], [1, 2], [2, 7], [3, 4], [4, 11], [5, 4], [6, 2], [7, 5], [8, 11], [9, 5], [10, 4], [11, 1], [12, 5], [13, 2], [14, 5], [15, 2], [16, 0]
+      [gd(2012, 1, 1), 7], [gd(2012, 1, 2), 6], [gd(2012, 1, 3), 4], [gd(2012, 1, 4), 8],
+      [gd(2012, 1, 5), 9], [gd(2012, 1, 6), 7], [gd(2012, 1, 7), 5], [gd(2012, 1, 8), 4],
+      [gd(2012, 1, 9), 7], [gd(2012, 1, 10), 8], [gd(2012, 1, 11), 9], [gd(2012, 1, 12), 6],
+      [gd(2012, 1, 13), 4], [gd(2012, 1, 14), 5], [gd(2012, 1, 15), 11], [gd(2012, 1, 16), 8],
+      [gd(2012, 1, 17), 8], [gd(2012, 1, 18), 11], [gd(2012, 1, 19), 11], [gd(2012, 1, 20), 6],
+      [gd(2012, 1, 21), 6], [gd(2012, 1, 22), 8], [gd(2012, 1, 23), 11], [gd(2012, 1, 24), 13],
+      [gd(2012, 1, 25), 7], [gd(2012, 1, 26), 9], [gd(2012, 1, 27), 9], [gd(2012, 1, 28), 8],
+      [gd(2012, 1, 29), 5], [gd(2012, 1, 30), 8], [gd(2012, 1, 31), 25]
     ];
-    $("#flot-dashboard5-chart").length && $.plot($("#flot-dashboard5-chart"), [
-        data1, data2
-      ],
+
+    var data3 = [
+      [gd(2012, 1, 1), 800], [gd(2012, 1, 2), 500], [gd(2012, 1, 3), 600], [gd(2012, 1, 4), 700],
+      [gd(2012, 1, 5), 500], [gd(2012, 1, 6), 456], [gd(2012, 1, 7), 800], [gd(2012, 1, 8), 589],
+      [gd(2012, 1, 9), 467], [gd(2012, 1, 10), 876], [gd(2012, 1, 11), 689], [gd(2012, 1, 12), 700],
+      [gd(2012, 1, 13), 500], [gd(2012, 1, 14), 600], [gd(2012, 1, 15), 700], [gd(2012, 1, 16), 786],
+      [gd(2012, 1, 17), 345], [gd(2012, 1, 18), 888], [gd(2012, 1, 19), 888], [gd(2012, 1, 20), 888],
+      [gd(2012, 1, 21), 987], [gd(2012, 1, 22), 444], [gd(2012, 1, 23), 999], [gd(2012, 1, 24), 567],
+      [gd(2012, 1, 25), 786], [gd(2012, 1, 26), 666], [gd(2012, 1, 27), 888], [gd(2012, 1, 28), 900],
+      [gd(2012, 1, 29), 178], [gd(2012, 1, 30), 555], [gd(2012, 1, 31), 993]
+    ];
+
+
+    var dataset = [
       {
-        series: {
-          lines: {
-            show: false,
-            fill: true
-          },
-          splines: {
-            show: true,
-            tension: 0.4,
-            lineWidth: 1,
-            fill: 0.4
-          },
-          points: {
-            radius: 1,
-            show: true
-          },
-          shadowSize: 2
+        label: "Количество сигналов",
+        data: data3,
+        color: "#1ab394",
+        bars: {
+          show: true,
+          align: "center",
+          barWidth: 24 * 60 * 60 * 600,
+          lineWidth: 0
         },
-        grid: {
-          hoverable: true,
-          clickable: true,
+        tooltip: {
+          show: true
+        }
 
-          borderWidth: 2,
-          color: 'transparent'
-        },
-        colors: ["#1ab394", "#1C84C6"],
-        xaxis: {},
-        yaxis: {},
-        tooltip: true
+      }, {
+        label: "Котировки",
+        data: data2,
+        yaxis: 2,
+        color: "#1C84C6",
+        lines: {
+          lineWidth: 1,
+          show: true,
+          fill: true,
+          fillColor: {
+            colors: [{
+              opacity: 0.2
+            }, {
+              opacity: 0.4
+            }]
+          }
+        }
       }
-    );
+    ];
 
+    var options = {
+      xaxis: {
+        mode: "time",
+        tickSize: [3, "day"],
+        tickLength: 0,
+        axisLabel: "Date",
+        axisLabelUseCanvas: true,
+        axisLabelFontSizePixels: 12,
+        axisLabelFontFamily: 'Arial',
+        axisLabelPadding: 10,
+        color: "#d5d5d5"
+      },
+      yaxes: [{
+        position: "left",
+        max: 1070,
+        color: "#d5d5d5",
+        axisLabelUseCanvas: true,
+        axisLabelFontSizePixels: 12,
+        axisLabelFontFamily: 'Arial',
+        axisLabelPadding: 3
+      }, {
+        position: "right",
+        clolor: "#d5d5d5",
+        axisLabelUseCanvas: true,
+        axisLabelFontSizePixels: 12,
+        axisLabelFontFamily: ' Arial',
+        axisLabelPadding: 67
+      }
+      ],
+      legend: {
+        noColumns: 1,
+        labelBoxBorderColor: "#000000",
+        position: "nw"
+      },
+      grid: {
+        hoverable: true,
+        borderWidth: 0
+      },
+      tooltip: {
+        show: true,
+        onHover: function(flotItem, $tooltipEl) {
+          console.log(flotItem, $tooltipEl)
+        }
+      }
+    };
+
+    function gd(year, month, day) {
+      return new Date(year, month - 1, day).getTime();
+    }
+
+    var previousPoint = null, previousLabel = null;
+
+    $.plot($("#flot-dashboard5-chart"), dataset, options);
   });
 </script>
 </body>
