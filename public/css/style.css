@@ -48,12 +48,11 @@ h5 {
   font-family: Optima
 }
 .realtime-analyzer-status {
-  font-weight: 200;
+  font-weight: 400;
   cursor: pointer;
   border-bottom: 1px dashed;
-  font-style: italic;
-  display: inline;
   margin-left: 5px;
+  margin-top: 20px;
 }
 .iqfx-configuration-not-selected-text {
   width: 100%;
