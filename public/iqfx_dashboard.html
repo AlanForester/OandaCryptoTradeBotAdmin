@@ -97,15 +97,6 @@
     <div class="row wrapper border-bottom white-bg page-heading">
       <div class="col-sm-12">
         <h2>Сводная информация по проекту</h2>
-        <div class="pull-right">
-          <div class="btn-group">
-            <button type="button" class="btn btn-xs btn-white active">Дневная</button>
-            <button type="button" class="btn btn-xs btn-white">Недельная</button>
-            <button type="button" class="btn btn-xs btn-white">Месячная</button>
-            <button type="button" class="btn btn-xs btn-white">Годовая</button>
-            <button type="button" class="btn btn-xs btn-white">Полная</button>
-          </div>
-        </div>
         <ol class="breadcrumb">
           <li>
             <a href="index.html">Проекты</a>
@@ -120,16 +111,36 @@
       </div>
     </div>
     <div class="wrapper wrapper-content animated fadeIn">
-
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="ibox float-e-margins">
+            <div class="ibox-title">
+              <h5>Фильтры</h5>
+            </div>
+            <div class="ibox-content">
+              <div>
+                Временной диапазон
+                <div class="pull-right">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-xs btn-white active">Дневная</button>
+                    <button type="button" class="btn btn-xs btn-white">Недельная</button>
+                    <button type="button" class="btn btn-xs btn-white">Месячная</button>
+                    <button type="button" class="btn btn-xs btn-white">Годовая</button>
+                    <button type="button" class="btn btn-xs btn-white">Полная</button>
+                  </div>
+                </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="p-w-md m-t-sm">
         <div class="row">
-
           <div class="col-sm-4">
             <h1 class="m-b-xs">
               26,900
             </h1>
             <small>
-              Количество котировок
+              Котировки
             </small>
             <div id="sparkline1" class="m-b-sm">
               <canvas style="display: inline-block; width: 249px; height: 50px; vertical-align: top;" width="249"
@@ -150,14 +161,13 @@
                 <h4>432.021</h4>
               </div>
             </div>
-
           </div>
           <div class="col-sm-4">
             <h1 class="m-b-xs">
               98,100
             </h1>
             <small>
-              Сигналов
+              Сигналы
             </small>
             <div id="sparkline2" class="m-b-sm">
               <canvas style="display: inline-block; width: 249px; height: 50px; vertical-align: top;" width="249"
@@ -292,73 +302,71 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="ibox float-e-margins">
+            <div class="ibox-title">
+              <h5>Сигнальные паттерны</h5>
+            </div>
+            <div class="ibox-content">
 
-
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="ibox float-e-margins">
-              <div class="ibox-title">
-                <h5>Сигнальные паттерны</h5>
-              </div>
-              <div class="ibox-content">
-
-                <table class="table table-striped">
-                  <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Seq.</th>
-                    <th>Длит.</th>
-                    <th>Тренд</th>
-                    <th>Call/Put(All)</th>
-                    <th>Сигналов</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td><a href="javascript:return false">32423</a></td>
-                    <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
-                    <td>800c</td>
-                    <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
-                    <td><span class="text-navy">2</span>/<span class="text-danger">2</span> (4)</td>
-                    <td>8</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Seq.</th>
+                  <th>Длит.</th>
+                  <th>Тренд</th>
+                  <th>Call/Put(All)</th>
+                  <th>Сигналов</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><a href="javascript:return false">32423</a></td>
+                  <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                  <td>800c</td>
+                  <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
+                  <td><span class="text-navy">2</span>/<span class="text-danger">2</span> (4)</td>
+                  <td>8</td>
+                </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="ibox float-e-margins">
-              <div class="ibox-title">
-                <h5>Последние сигналы</h5>
-              </div>
-              <div class="ibox-content">
+        </div>
+        <div class="col-lg-6">
+          <div class="ibox float-e-margins">
+            <div class="ibox-title">
+              <h5>Последние сигналы</h5>
+            </div>
+            <div class="ibox-content">
 
-                <table class="table table-striped">
-                  <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Seq.</th>
-                    <th>Патт.</th>
-                    <th>Создан</th>
-                    <th>Длит.</th>
-                    <th>Измен.</th>
-                    <th>Рез.</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
-                    <td><a href="javascript:return false">32423</a></td>
-                    <td>11:39</td>
-                    <td>360c</td>
-                    <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
-                    <td><i class="fa fa-check text-navy"></i></td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Seq.</th>
+                  <th>Патт.</th>
+                  <th>Создан</th>
+                  <th>Длит.</th>
+                  <th>Измен.</th>
+                  <th>Рез.</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                  <td><a href="javascript:return false">32423</a></td>
+                  <td>11:39</td>
+                  <td>360c</td>
+                  <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
+                  <td><i class="fa fa-check text-navy"></i></td>
+                </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -530,7 +538,7 @@
       },
       tooltip: {
         show: true,
-        onHover: function(flotItem, $tooltipEl) {
+        onHover: function (flotItem, $tooltipEl) {
           console.log(flotItem, $tooltipEl)
         }
       }
