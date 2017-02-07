@@ -6,6 +6,9 @@
  *   version 2.4
  *
 */
+.pointer {
+  cursor: pointer;
+}
 h1,
 h2,
 h3,
