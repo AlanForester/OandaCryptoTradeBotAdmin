@@ -17,7 +17,7 @@
 
   <!-- Gritter -->
   <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-
+  <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css"
@@ -33,13 +33,43 @@
         <li class="nav-header">
           <div class="dropdown profile-element">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong
-                              class="font-bold">Алекс Коллин</strong>
-                             </span> <span class=" text-warning"> Анализатор выключен <b
-                              class="caret"></b></span> </span> </a>
+                <span class="clear">
+                  <span class="block m-t-xs">
+                    <strong class="font-bold"><i class="fa fa-user"></i> Алекс Коллин</strong>
+                  </span>
+                  <span class="text-muted">
+                    Пробный период <b class="caret"></b>
+                  </span>
+                </span>
+            </a>
             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-              <li><a href="profile.html">Включить</a></li>
+              <li><a href="profile.html">Активировать</a></li>
             </ul>
+          </div>
+          <hr>
+          <div class="float-e-margins">
+            <div class="dropdown profile-element">
+              <span class="clear block m-t-xs">
+                <strong class="font-bold" style="color: #DFE4ED"><i class="fa fa-empire"></i> Анализатор:</strong>
+              </span>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear">
+                              <span class="text-danger">Выключен<b class="caret"></b></span>
+                            </span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+              <li><a href="#">Включить</a></li>
+            </ul>
+            </div>
+          </div>
+          <div class="float-e-margins">
+            <div>
+              <span class="clear block m-t-xs">
+                <strong class="font-bold" style="color: #DFE4ED"><i class="fa fa-magic"></i> Конфигурация:</strong>
+              </span>
+            </div>
+            <span class="text-danger pointer">Не выбрана <b
+              class="caret"></b></span>
           </div>
           <div class="logo-element">
             IN+
@@ -48,8 +78,13 @@
         <li>
           <a href="css_animation.html"><i class="fa fa-line-chart"></i> <span class="nav-label">Сводная стата</span></a>
         </li>
-        <li>
-          <a href="css_animation.html"><i class="fa fa-magic"></i> <span class="nav-label">Конфигурация</span></a>
+        <li class="active">
+          <a href="#"><i class="fa fa-magic"></i> <span class="nav-label">Конфигуратор</span><span
+            class="fa arrow"></span></a>
+          <ul class="nav nav-second-level collapse">
+            <li><a href="graph_flot.html"> <i class="fa fa-list-ul"></i>Список</a></li>
+            <li><a href="graph_morris.html"><i class="fa fa-plus-circle"></i> Создать</a></li>
+          </ul>
         </li>
         <li>
           <a href="css_animation.html"><i class="fa fa-history"></i> <span class="nav-label">Анализ истории</span></a>
@@ -102,8 +137,8 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="iqfx-configuration-not-selected-text">
-          <div><i class="fa fa-arrow-circle-up" style="font-size: 50px"></i></div>
-          <span>Выберите проект</span></div>
+          <i class="fa fa-arrow-circle-left" style="font-size: 50px"></i>
+          <span>Выберите конфигурацию</span></div>
       </div>
     </div>
   </div>
@@ -149,127 +184,16 @@
 <!-- Toastr -->
 <script src="js/plugins/toastr/toastr.min.js"></script>
 
-
+<!-- Select2 -->
+<script src="js/plugins/select2/select2.full.min.js"></script>
 <script>
   $(document).ready(function () {
 
-    var data1 = [
-      [0, 4], [1, 8], [2, 5], [3, 10], [4, 4], [5, 16], [6, 5], [7, 11], [8, 6], [9, 11], [10, 30], [11, 10], [12, 13], [13, 4], [14, 3], [15, 3], [16, 6]
-    ];
-    var data2 = [
-      [0, 1], [1, 0], [2, 2], [3, 0], [4, 1], [5, 3], [6, 1], [7, 5], [8, 2], [9, 3], [10, 2], [11, 1], [12, 0], [13, 2], [14, 8], [15, 0], [16, 0]
-    ];
-    $("#flot-dashboard-chart").length && $.plot($("#flot-dashboard-chart"), [
-        data1, data2
-      ],
-      {
-        series: {
-          lines: {
-            show: false,
-            fill: true
-          },
-          splines: {
-            show: true,
-            tension: 0.4,
-            lineWidth: 1,
-            fill: 0.4
-          },
-          points: {
-            radius: 0,
-            show: true
-          },
-          shadowSize: 2
-        },
-        grid: {
-          hoverable: true,
-          clickable: true,
-          tickColor: "#d5d5d5",
-          borderWidth: 1,
-          color: '#d5d5d5'
-        },
-        colors: ["#1ab394", "#1C84C6"],
-        xaxis: {},
-        yaxis: {
-          ticks: 4
-        },
-        tooltip: false
-      }
-    );
-
-    var doughnutData = [
-      {
-        value: 300,
-        color: "#a3e1d4",
-        highlight: "#1ab394",
-        label: "App"
-      },
-      {
-        value: 50,
-        color: "#dedede",
-        highlight: "#1ab394",
-        label: "Software"
-      },
-      {
-        value: 100,
-        color: "#A4CEE8",
-        highlight: "#1ab394",
-        label: "Laptop"
-      }
-    ];
-
-    var doughnutOptions = {
-      segmentShowStroke: true,
-      segmentStrokeColor: "#fff",
-      segmentStrokeWidth: 2,
-      percentageInnerCutout: 45, // This is 0 for Pie charts
-      animationSteps: 100,
-      animationEasing: "easeOutBounce",
-      animateRotate: true,
-      animateScale: false
-    };
-
-    var ctx = document.getElementById("doughnutChart").getContext("2d");
-    var DoughnutChart = new Chart(ctx).Doughnut(doughnutData, doughnutOptions);
-
-    var polarData = [
-      {
-        value: 300,
-        color: "#a3e1d4",
-        highlight: "#1ab394",
-        label: "App"
-      },
-      {
-        value: 140,
-        color: "#dedede",
-        highlight: "#1ab394",
-        label: "Software"
-      },
-      {
-        value: 200,
-        color: "#A4CEE8",
-        highlight: "#1ab394",
-        label: "Laptop"
-      }
-    ];
-
-    var polarOptions = {
-      scaleShowLabelBackdrop: true,
-      scaleBackdropColor: "rgba(255,255,255,0.75)",
-      scaleBeginAtZero: true,
-      scaleBackdropPaddingY: 1,
-      scaleBackdropPaddingX: 1,
-      scaleShowLine: true,
-      segmentShowStroke: true,
-      segmentStrokeColor: "#fff",
-      segmentStrokeWidth: 2,
-      animationSteps: 100,
-      animationEasing: "easeOutBounce",
-      animateRotate: true,
-      animateScale: false
-    };
-    var ctx = document.getElementById("polarChart").getContext("2d");
-    var Polarchart = new Chart(ctx).PolarArea(polarData, polarOptions);
-
+    $(".select2_demo_3").select2({
+      placeholder: "Выберите конфигурацию",
+      allowClear: false,
+      width: "200px"
+    });
   });
 </script>
 </body>
