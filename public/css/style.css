@@ -5202,10 +5202,10 @@ dd.project-people {
   padding: 40px;
 }
 /* ISSUE TRACKER */
-.issue-tracker .btn-link {
+.analyzer-task-list .btn-link {
   color: #1ab394;
 }
-table.issue-tracker tbody tr td {
+table.analyzer-task-list tbody tr td {
   vertical-align: middle;
   height: 50px;
 }
