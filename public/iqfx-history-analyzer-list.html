@@ -17,7 +17,8 @@
 
   <!-- Gritter -->
   <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
-
+  <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
+  <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css"
@@ -69,22 +70,36 @@
                   <strong>Найдено 61 задач</strong>
                   <div class="table-responsive">
                     <table class="table table-hover analyzer-task-list">
+                      <thead>
+                      <tr>
+                        <th>№</th>
+                        <th>Статус</th>
+                        <th>Конфиг.</th>
+                        <th>Профит</th>
+                        <th>Просадка</th>
+                        <th>Макс. тренд</th>
+                        <th>Действия</th>
+                      </tr>
+                      </thead>
                       <tbody>
                       <tr>
                         <td>
-                          <a href="#">История № 1</a>
+                          <a href="#">1</a>
                         </td>
                         <td>
-                          <span class="label label-primary">Анализ завершен</span>
+                          <span class="label label-primary">Завершен</span>
                         </td>
                         <td>
                           Название
                         </td>
                         <td>
-                          12.02.2015 10:00 - 12.02.2015 10:00
+                          <span class="text-navy"> <i class="fa fa-arrow-up"></i> 12 </span>
                         </td>
                         <td>
-                          Баланс:<span class="text-navy"> <i class="fa fa-arrow-up"></i> 12 </span>
+                          <span class="text-danger"> <i class="fa fa-arrow-down"></i> 12 </span>
+                        </td>
+                        <td>
+                          <span class="text-navy"><i class="fa fa-arrow-up"></i>12</span>/<span class="text-danger"><i class="fa fa-arrow-down"></i>12</span>
                         </td>
                         <td class="text-right">
                             <button type="button" class="btn btn-sm btn-white"> <i class="fa fa-eye"></i> </button>
@@ -105,9 +120,19 @@
               <h5>Фильтры</h5>
             </div>
             <div class="ibox-content">
-              <div class="row">
-                <div class="col-sm-4">
-                </div>
+              <div class="form-group">
+                <label class="font-normal">Конфигурация:</label>
+                  <select data-placeholder="Выберите..." class="chosen-select" multiple style="width:100%;" tabindex="4">
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label class="font-normal">Статус:</label>
+                  <select data-placeholder="Выберите..." class="chosen-select" style="width:100%;" tabindex="4">
+                    <option value="Zambia">Все</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
               </div>
             </div>
           </div>
@@ -157,10 +182,25 @@
 <!-- Toastr -->
 <script src="js/plugins/toastr/toastr.min.js"></script>
 
+<!-- Select2 -->
+<script src="js/plugins/select2/select2.full.min.js"></script>
+
+<!-- Chosen -->
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+
 
 <script>
   $(document).ready(function () {
-
+    var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    }
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
   });
 </script>
