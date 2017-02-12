@@ -38,7 +38,7 @@
     </div>
     <div class="row wrapper border-bottom white-bg page-heading">
       <div class="col-lg-10">
-        <h2>Список задач анализатора истории</h2>
+        <h2>Список конфигураций</h2>
         <ol class="breadcrumb">
           <li>
             <a href="index.html">Home</a>
@@ -56,28 +56,27 @@
     </div>
     <div class="wrapper wrapper-content animated fadeInRight">
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-8">
           <div class="ibox">
             <div class="ibox-title">
-              <h5>Список задач</h5>
+              <h5>Управление конфигурациями</h5>
               <div class="ibox-tools">
-                <a href="" class="btn btn-primary btn-xs btn-rounded">Новый анализ <i class="fa fa-plus"></i></a>
+                <a href="" class="btn btn-primary btn-xs btn-rounded">Новая конфигурация <i class="fa fa-plus"></i></a>
               </div>
             </div>
             <div class="ibox-content">
               <div class="row">
                 <div class="col-sm-12">
-                  <strong>Найдено 61 задач</strong>
+                  <strong>Найдено 61 конфигураций</strong>
                   <div class="table-responsive">
                     <table class="table table-hover analyzer-task-list">
                       <thead>
                       <tr>
-                        <th>№</th>
-                        <th>Статус</th>
-                        <th>Конфиг.</th>
-                        <th>Профит</th>
-                        <th>Просадка</th>
-                        <th>Макс. тренд</th>
+                        <th>#</th>
+                        <th>Название</th>
+                        <th>Инструмент</th>
+                        <th>Создан</th>
+                        <th>Обновлен</th>
                         <th>Действия</th>
                       </tr>
                       </thead>
@@ -87,23 +86,20 @@
                           <a href="#">1</a>
                         </td>
                         <td>
-                          <span class="label label-primary">Завершен</span>
+                          Кон
                         </td>
                         <td>
-                          Название
+                          USD/CAS
                         </td>
                         <td>
-                          <span class="text-navy"> <i class="fa fa-arrow-up"></i> 12 </span>
+                          10.01.2017
                         </td>
                         <td>
-                          <span class="text-danger"> <i class="fa fa-arrow-down"></i> 12 </span>
-                        </td>
-                        <td>
-                          <span class="text-navy"><i class="fa fa-arrow-up"></i>12</span>/<span class="text-danger"><i class="fa fa-arrow-down"></i>12</span>
+                          12.01.2017
                         </td>
                         <td class="text-right">
-                            <button type="button" class="btn btn-sm btn-white"> <i class="fa fa-eye"></i> </button>
-                            <button type="button" class="btn btn-sm btn-white"> <i class="fa fa-edit"></i> </button>
+                          <button type="button" class="btn btn-sm btn-white"><i class="fa fa-eye"></i></button>
+                          <button type="button" class="btn btn-sm btn-white"><i class="fa fa-edit"></i></button>
                         </td>
                       </tr>
                       </tbody>
@@ -114,25 +110,87 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
           <div class="ibox">
             <div class="ibox-title">
-              <h5>Фильтры</h5>
+              <h5>Просмотр #1</h5>
             </div>
             <div class="ibox-content">
-              <div class="form-group">
-                <label class="font-normal">Конфигурация:</label>
-                  <select data-placeholder="Выберите..." class="chosen-select" multiple style="width:100%;" tabindex="4">
-                    <option value="Zambia">Zambia</option>
-                    <option value="Zimbabwe">Zimbabwe</option>
-                  </select>
+              <div class="row">
+                <div class="col-sm-12">
+                  Инструмент:<span class="label pull-right">USD</span>
+                </div>
               </div>
-              <div class="form-group">
-                <label class="font-normal">Статус:</label>
-                  <select data-placeholder="Выберите..." class="chosen-select" style="width:100%;" tabindex="4">
-                    <option value="Zambia">Все</option>
-                    <option value="Zimbabwe">Zimbabwe</option>
-                  </select>
+              <div class="row">
+                <div class="col-sm-12">
+                  Длит. свечей:<span class="label pull-right">30,60,180</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Интервал работы анализатора:<span class="label pull-right">1 сек.</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Интервал работы сборщика:<span class="label pull-right">1 сек.</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Время прогнозирования:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Глубина последовательностей:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                 Мин. глубина последовательностей:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                 Истечение прогнозов:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Тип связи свечей:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                    Делитель оставшегося времени до закрытия прогноза:
+                    <span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Шанс вхождения сигнала относительно call,put:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Минимальное количество повторов call,put:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Задержка вхождений при тренде:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Минимальное изменение цены актива:<span class="label pull-right">USD</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  Минимальное изменение количества тиков:<span class="label pull-right">USD</span>
+                </div>
               </div>
             </div>
           </div>
@@ -140,6 +198,7 @@
       </div>
     </div>
   </div>
+</div>
 </div>
 
 <!-- Mainly scripts -->
@@ -192,11 +251,11 @@
 <script>
   $(document).ready(function () {
     var config = {
-      '.chosen-select'           : {},
-      '.chosen-select-deselect'  : {allow_single_deselect:true},
-      '.chosen-select-no-single' : {disable_search_threshold:10},
-      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-      '.chosen-select-width'     : {width:"95%"}
+      '.chosen-select': {},
+      '.chosen-select-deselect': {allow_single_deselect: true},
+      '.chosen-select-no-single': {disable_search_threshold: 10},
+      '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
+      '.chosen-select-width': {width: "95%"}
     }
     for (var selector in config) {
       $(selector).chosen(config[selector]);
