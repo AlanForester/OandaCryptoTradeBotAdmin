@@ -3400,6 +3400,10 @@ a:focus {
 }
 .font-normal {
   font-weight: 400;
+  word-break: break-all;
+}
+.filter-label {
+  word-break: break-all;
 }
 .text-uppercase {
   text-transform: uppercase;
