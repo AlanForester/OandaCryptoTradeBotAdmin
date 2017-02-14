@@ -19,7 +19,6 @@
   <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
   <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
   <link href="css/plugins/select2/select2.min.css" rel="stylesheet">
-  <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
@@ -64,13 +63,6 @@
               <h5>Паттерны</h5>
             </div>
             <div class="ibox-content">
-              <div class="pull-right">
-                Временной диапазон
-                <div id="reportrange" class="form-control">
-                  <i class="fa fa-calendar"></i>
-                  <span></span> <b class="caret"></b>
-                </div>
-              </div>
               <div class="row">
                 <div class="col-sm-12">
                   <strong>Найдено 61 паттернов</strong>
@@ -109,7 +101,8 @@
                           600
                         </td>
                         <td>
-                          <span class="text-navy">12</span>/<span class="text-danger">12</span>/<span class="text-muted">12</span>
+                          <span class="text-navy">12</span>/<span class="text-danger">12</span>/<span
+                          class="text-muted">12</span>
                         </td>
                         <td>
                           <span class="text-navy">12</span>/<span class="text-danger">12</span>
@@ -148,163 +141,110 @@
             </div>
             <div class="ibox-content">
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Конфигурация:</label>
-                <select data-placeholder="Выберите..." class="chosen-select" multiple style="width:100%;" tabindex="4">
-                  <option value="Zambia">Zambia</option>
-                  <option value="Zimbabwe">Zimbabwe</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> История:</label>
-                <select data-placeholder="Выберите..." class="chosen-select" style="width:100%;" tabindex="4">
-                  <option value="Zambia">Все</option>
-                  <option value="Zimbabwe">Zimbabwe</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Наибольший процент:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Call к Put</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
-                      <label class="filter-label">Put к Call</label>
-                    </div>
-                  </div>
-                </div>
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Наибольшие значения:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Call/Put</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Put/Call</label>
-                    </div>
-                  </div>
+                <label class="font-normal"> Временной диапазон:</label>
+                <div id="reportrange" class="form-control">
+                  <i class="fa fa-calendar"></i>
+                  <span></span> <b class="caret"></b>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Сортировка времени:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Убывающая</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Возрастающая</label>
-                    </div>
-                  </div>
+                <label class="font-normal">Конфигурация:</label>
+                <div>
+                  <select multiple data-placeholder="Выбери" class="select2_demo_1 form-control">
+                    <option value="1">Option 1</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Сортировка по максимальному значению тиков:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Убывающая</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Возрастающая</label>
-                    </div>
-                  </div>
+                <label class="font-normal">История:</label>
+                <div>
+                  <select multiple class="select2_demo_1 form-control">
+                    <option value="1">Option 1</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Сортировка по среднему значению тиков:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Убывающая</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Возрастающая</label>
-                    </div>
-                  </div>
+                <label class="font-normal">Наибольший Call/Put:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Процент Call к Put</option>
+                    <option value="1">Процент Put к Call</option>
+                    <option value="1">Значение Call/Put</option>
+                    <option value="1">Значение Put/Call</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Сортировка по наибольшему тренду:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Call</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Put</label>
-                    </div>
-                  </div>
+                <label class="font-normal">Сортировка времени:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Убывающая</option>
+                    <option value="1">Возрастающая</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Сортировка по количеству прогнозов:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Убывающая</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Возрастающая</label>
-                    </div>
-                  </div>
+                <label class="font-normal">Сорт. по макс. знач. тиков:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Убывающая</option>
+                    <option value="1">Возрастающая</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Сортировка по количеству сигналов:</label>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="radio radio-success radio-inline">
-                      <input type="radio" value="option1" name="radioInline">
-                      <label class="filter-label">Убывающая</label>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="radio radio-danger radio-inline">
-                      <input type="radio" value="option2" name="radioInline">
-                      <label class="filter-label">Возрастающая</label>
-                    </div>
-                  </div>
+                <label class="font-normal">Сорт. по сред. знач. тиков:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Убывающая</option>
+                    <option value="1">Возрастающая</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
-                <label class="font-normal"><i class="fa fa-trash-o pointer btn-link"></i> Показывать:</label>
+                <label class="font-normal">Сорт. по тренду:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Наибольший Call</option>
+                    <option value="1">Наибольший Put</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="font-normal">Сорт. по кол. прогнозов:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Убывающая</option>
+                    <option value="1">Возрастающая</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="font-normal">Сорт. по кол. сигналов:</label>
+                <div>
+                  <select class="select2_demo_1 form-control">
+                    <option value="" selected>Без сортировки</option>
+                    <option value="1">Убывающая</option>
+                    <option value="1">Возрастающая</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="font-normal">Показывать:</label>
                 <div class="row">
-                  <div class="col-sm-6">
+                  <div class="col-sm-12">
                     <div class="checkbox checkbox-success checkbox-inline">
                       <input type="checkbox" value="option1" checked="">
                       <label class="filter-label"> Включенные </label>
                     </div>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-12">
                     <div class="checkbox checkbox-danger checkbox-inline">
                       <input type="checkbox" value="option1" checked="">
                       <label class="filter-label"> Отключенные </label>
@@ -366,9 +306,6 @@
 <!-- Select2 -->
 <script src="js/plugins/select2/select2.full.min.js"></script>
 
-<!-- Chosen -->
-<script src="js/plugins/chosen/chosen.jquery.js"></script>
-
 <!-- Date range use moment.js same as full calendar plugin -->
 <script src="js/plugins/fullcalendar/moment.min.js"></script>
 
@@ -376,17 +313,7 @@
 <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
 <script>
   $(document).ready(function () {
-    var config = {
-      '.chosen-select': {},
-      '.chosen-select-deselect': {allow_single_deselect: true},
-      '.chosen-select-no-single': {disable_search_threshold: 10},
-      '.chosen-select-no-results': {no_results_text: 'Oops, nothing found!'},
-      '.chosen-select-width': {width: "95%"}
-    }
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
-    $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+    $('#reportrange span').html(moment().subtract(29, 'days').format('MMM D, YYYY') + ' - ' + moment().format('MMM D, YYYY'));
 
     $('#reportrange').daterangepicker({
       format: 'MM/DD/YYYY',
@@ -421,13 +348,16 @@
         toLabel: 'To',
         customRangeLabel: 'Custom',
         daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        monthNames: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         firstDay: 1
       }
     }, function (start, end, label) {
       console.log(start.toISOString(), end.toISOString(), label);
-      $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+
+      $('#reportrange span').html(start.format('MM D, YYYY') + ' - ' + end.format('MM D, YYYY'));
     });
+
+    $(".select2_demo_1").select2();
   });
 </script>
 </body>
