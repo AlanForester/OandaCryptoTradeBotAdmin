@@ -29,7 +29,7 @@ module.exports = {
       'angular2-jwt'
     ],
     'app': [
-      './src/app/index'
+      './src/bootstrap'
     ]
   },
 

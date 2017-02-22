@@ -4,13 +4,17 @@ import { tokenNotExpired } from 'angular2-jwt';
 
 
 @Injectable()
-export class AuthGuard implements CanActivate {
+export class Auth implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate() {
-    if (tokenNotExpired()) {
+    if (localStorage.getItem('currentUser')) {
+      // logged in so return true
       return true;
     }
+    // if (tokenNotExpired()) {
+    //   return true;
+    // }
 
     this.router.navigate(['/login']);
     return false;

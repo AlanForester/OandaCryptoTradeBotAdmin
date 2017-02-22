@@ -5,28 +5,20 @@ import {FormsModule} from '@angular/forms';
 import {NgModule} from '@angular/core';
 
 import {AUTH_PROVIDERS} from 'angular2-jwt';
-import {Panel} from './panel/panel';
-import {Leftmenu} from './panel/leftmenu/leftmenu';
-import {Toolbar} from './panel/toolbar/toolbar';
+import {SERVICE_PROVIDERS} from './services/index'
+import {GUARD_PROVIDERS} from './guards/index'
+import {MODEL_PROVIDERS} from './models/index'
 
-import {AuthGuard} from './../common/auth.guard';
-import {Home} from './home';
-import {Login} from './auth/login';
-import {Signup} from './auth/signup';
-import {App} from './app';
+import {App} from './app/app';
+import {APP_DECLARATIONS} from './app/index'
 
-import {routes} from './app.routes';
+import {routes} from './routes';
 
 @NgModule({
   bootstrap: [App],
   declarations: [
-    Home,
-    Login,
-    Signup,
     App,
-    Panel,
-    Leftmenu,
-    Toolbar
+    ...APP_DECLARATIONS
   ],
   imports: [
     HttpModule,
@@ -37,9 +29,13 @@ import {routes} from './app.routes';
     })
   ],
   providers: [
-    AuthGuard,
-    ...AUTH_PROVIDERS
+    ...AUTH_PROVIDERS,
+    ...SERVICE_PROVIDERS,
+    ...GUARD_PROVIDERS,
+    ...MODEL_PROVIDERS
   ]
 })
 export class AppModule {
 }
+
+

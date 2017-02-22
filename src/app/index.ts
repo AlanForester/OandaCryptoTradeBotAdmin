@@ -1,5 +1,16 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {Panel} from './panel/panel';
+import {Leftmenu} from './panel/leftmenu/leftmenu';
+import {Toolbar} from './panel/toolbar/toolbar';
 
-import { AppModule } from './app.module';
+import {Home} from './home';
+import {Login} from './auth/login';
+import {Signup} from './auth/signup';
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+export const APP_DECLARATIONS: any[] = [
+  Panel,
+  Leftmenu,
+  Toolbar,
+  Home,
+  Login,
+  Signup
+];

@@ -1,38 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Http } from '@angular/http';
-import { contentHeaders } from '../../../common/headers';
+
+import { Auth as AuthService } from '../../../services/auth';
 
 const styles   = require('./login.css');
 const template = require('./login.html');
+
 
 @Component({
   selector: 'login',
   template: template,
   styles: [ styles ]
 })
-export class Login {
-  constructor(public router: Router, public http: Http) {
+
+export class Login implements OnInit {
+  model: any = {};
+  loading = false;
+  error = '';
+
+  constructor(
+    private router: Router,
+    private authenticationService: AuthService) { }
+
+  ngOnInit() {
+    // reset login status
+    this.authenticationService.logout();
   }
 
-  login(event, username, password) {
-    event.preventDefault();
-    let body = JSON.stringify({ username, password });
-    this.http.post('http://localhost:3001/sessions/create', body, { headers: contentHeaders })
-      .subscribe(
-        response => {
-          localStorage.setItem('id_token', response.json().id_token);
-          this.router.navigate(['home']);
-        },
-        error => {
-          alert(error.text());
-          console.log(error.text());
+  login() {
+    this.loading = true;
+    this.authenticationService.login(this.model.username, this.model.password)
+      .subscribe(result => {
+        if (result === true) {
+          this.router.navigate(['/']);
+        } else {
+          this.error = 'Username or password is incorrect';
+          this.loading = false;
         }
-      );
+      });
   }
 
   signup(event) {
-    event.preventDefault();
     this.router.navigate(['signup']);
   }
+
 }
