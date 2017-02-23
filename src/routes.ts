@@ -10,6 +10,6 @@ export const routes: Routes = [
   {path: 'login', component: Login},
   {path: 'signup', component: Signup},
   {path: 'home', component: Home, canActivate: [AuthGuard]},
-  {path: 'panel', component: Panel, canActivate: [AuthGuard]},
+  {path: 'panel', component: Panel},
   {path: '**', component: Login},
 ];

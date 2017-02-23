@@ -8,13 +8,10 @@ export class Auth implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate() {
-    if (localStorage.getItem('currentUser')) {
-      // logged in so return true
+
+    if (tokenNotExpired()) {
       return true;
     }
-    // if (tokenNotExpired()) {
-    //   return true;
-    // }
 
     this.router.navigate(['/login']);
     return false;
