@@ -21,7 +21,7 @@ export const routes: Routes = [
         { path: '', redirectTo: 'list', pathMatch: 'full' },
         { path: 'list', component: ConfiguratorList },
         { path: 'add', component: ConfiguratorForm },
-        { path: 'edit', component: ConfiguratorForm },
+        { path: 'edit/:id', component: ConfiguratorForm },
       ]}
     ]
   },
