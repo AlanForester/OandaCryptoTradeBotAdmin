@@ -5,6 +5,8 @@ import {Signup} from './app/auth/signup/signup';
 import {Auth as AuthGuard} from './guards/auth';
 import {Panel} from './app/panel/panel';
 import {Dashboard} from './app/panel/dashboard/dashboard'
+import {List} from './app/panel/configurator/list/list'
+import {Add} from './app/panel/configurator/add/add'
 
 export const routes: Routes = [
   {path: '', component: Login},
@@ -14,7 +16,12 @@ export const routes: Routes = [
   {path: 'panel', component: Panel,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: Dashboard }
+      { path: 'dashboard', component: Dashboard },
+      { path: 'configurator', children: [
+        { path: '', redirectTo: 'list', pathMatch: 'full' },
+        { path: 'list', component: List },
+        { path: 'add', component: Add },
+      ]}
     ]
   },
   {path: '**', component: Login},

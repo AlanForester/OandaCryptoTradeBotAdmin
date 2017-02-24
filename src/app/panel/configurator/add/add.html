@@ -1,0 +1,215 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2>Конфигурация</h2>
+  </div>
+</div>
+<div class="row">
+  <form action="">
+    <div class="col-lg-9">
+      <div class="wrapper wrapper-content animated fadeInUp">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>Общие настройки</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="row form-horizontal">
+              <div class="form-group"><label class="col-sm-3 control-label">Название</label>
+                <div class="col-sm-7"><p class="form-control-static">Default</p></div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group"><label class="col-sm-3 control-label">Инструмент</label>
+                <div class="col-sm-7">
+                  <select class="select2_demo_1 form-control">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Длина свечей*</label>
+                <div class="col-sm-6">
+                  <div class="ionrange_1"></div>
+                </div>
+                <div class="col-sm-1">
+                  <button class="btn btn-outline btn-primary btn-circle" type="button" style="margin-top: 15px;">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <div class="col-lg-offset-3 col-sm-7" style="margin-top: 20px;">
+                  <span class="badge badge-info">60сек <i class="fa fa-remove" style="cursor: pointer"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>Настройки анализатора</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="row form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Интервал работы анализатора</label>
+                <div class="col-sm-7">
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Интервал работы сборщика котировок</label>
+                <div class="col-sm-7">
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Время прогнозирования (закрытия прогнозов)</label>
+                <div class="col-sm-6">
+                  <div class="ionrange_1"></div>
+                </div>
+                <div class="col-sm-1">
+                  <button class="btn btn-outline btn-primary btn-circle" type="button" style="margin-top: 15px;">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <div class="col-lg-offset-3 col-sm-7" style="margin-top: 20px;">
+                  <span class="badge badge-info">+60сек <i class="fa fa-remove" style="cursor: pointer"></i></span>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Глубина последовательностей</label>
+                <div class="col-sm-3">
+                  <label class="control-label">Максимальная</label>
+                  <div class="ionrange_1"></div>
+                </div>
+                <div class="col-lg-offset-1 col-sm-3">
+                  <label class="control-label">Минимальная</label>
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Время истечения прогнозов по их длительности</label>
+                <div class="col-sm-3">
+                  <label class="control-label">Длительность прогноза</label>
+                  <div class="ionrange_1"></div>
+                </div>
+                <div class="col-sm-3">
+                  <label class="control-label">Время истечения</label>
+                  <div class="ionrange_1"></div>
+                </div>
+                <div class="col-sm-1">
+                  <button class="btn btn-outline btn-primary btn-circle" type="button" style="margin-top: 15px;">
+                    <i class="fa fa-plus"></i>
+                  </button>
+                </div>
+                <div class="col-lg-offset-3 col-sm-7" style="margin-top: 20px;">
+                      <span class="badge badge-danger">Длительность 380с, истекает через 20мин. <i class="fa fa-remove"
+                                                                                                   style="cursor: pointer"></i></span>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Тип связи свечей в последовательностях</label>
+                <div class="col-sm-7">
+                  <div class="radio radio-info radio-inline">
+                    <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+                    <label for="inlineRadio1"> Последовательная </label>
+                  </div>
+                  <div class="radio radio-info  radio-inline">
+                    <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                    <label for="inlineRadio2"> Пересекающаяся </label>
+                  </div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Делитель оставшегося времени до закрытия прогноза</label>
+                <div class="col-sm-7">
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>Настройки сигнализатора</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="row form-horizontal">
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Шанс вхождения сигнала относительно call,put</label>
+                <div class="col-sm-7">
+                  <div class="ionrange_2"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Минимальное количество повторов call,put</label>
+                <div class="col-sm-7">
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Задержка вхождений при тренде</label>
+                <div class="col-sm-7">
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Минимальное изменение цены актива</label>
+                <div class="col-sm-3">
+                  <label class="control-label">Call</label>
+                  <div class="ionrange_2"></div>
+                </div>
+                <div class="col-sm-offset-1 col-sm-3">
+                  <label class="control-label">Put</label>
+                  <div class="ionrange_2"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label">Минимальное изменение количества тиков </label>
+                <div class="col-sm-7">
+                  <div class="ionrange_1"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="wrapper wrapper-content">
+        <h4>Информация и примеры</h4>
+        <div class="row">
+        </div>
+        <div class="m-t-md small">
+          <ul>
+            <li>Длина свечей - производимые при получении котировок и
+              используемые при анализе
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Действия</h5>
+        </div>
+        <div class="ibox-content">
+          <p>
+            <button type="button" class="btn btn-block btn-outline btn-primary">Сохранить</button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
