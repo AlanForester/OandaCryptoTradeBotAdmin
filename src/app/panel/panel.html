@@ -1,20 +1,14 @@
 <div id="wrapper">
-  <nav class="navbar-default navbar-static-side" role="navigation">
+  <nav class="navbar-default navbar-static-side" role="navigation" style="background-color: #2f4050; height: 100%;">
     <div class="sidebar-collapse">
       <div class="logo-in-menu">IqFX</div>
       <leftmenu></leftmenu>
     </div>
   </nav>
   <div id="page-wrapper" class="gray-bg dashbard-1">
-    <div class="row border-bottom">
-      <toolbar></toolbar>
+    <div class="row" style="margin-bottom: 80px;">
+      <toolbar style="position: fixed; z-index: 1;"></toolbar>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="iqfx-configuration-not-selected-text">
-          <i class="fa fa-arrow-circle-left" style="font-size: 50px"></i>
-          <span>Выберите конфигурацию</span></div>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </div>

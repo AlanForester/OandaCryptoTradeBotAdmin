@@ -12,7 +12,6 @@ const template = require('./panel.html');
 export class Panel implements OnInit, AfterViewInit {
   //opts: ISlimScrollOptions;
   constructor() {
-
   }
 
   logout() {
