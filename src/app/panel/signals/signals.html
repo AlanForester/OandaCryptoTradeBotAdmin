@@ -1,0 +1,230 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Список сигналов</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a>App Views</a>
+      </li>
+      <li class="active">
+        <strong>Clients</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>Сигналы</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="row">
+            <div class="col-sm-12">
+              <strong>Найдено 61 сигналов</strong>
+              <div class="table-responsive">
+                <table class="table table-hover analyzer-task-list">
+                  <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>H №</th>
+                    <th>Cfg.</th>
+                    <th>Pat</th>
+                    <th>Create (t)</th>
+                    <th>Cr-cost</th>
+                    <th>La-cost</th>
+                    <th>La-ch</th>
+                    <th>Ex-cost</th>
+                    <th>Cl-cost</th>
+                    <th>Mi-cost</th>
+                    <th>Ma-cost</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>
+                      <a href="#">1</a>
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      Название
+                    </td>
+                    <td>
+                      2
+                    </td>
+                    <td>
+                      10.10.10 10:11 (600)
+                    </td>
+                    <td>
+                      1.22
+                    </td>
+                    <td>
+                      1.22
+                    </td>
+                    <td>
+                      1.22
+                    </td>
+                    <td>
+                      1.11<span class="text text-navy"><i class="fa fa-level-up"></i></span>
+                    </td>
+                    <td>
+                      1.11
+                    </td>
+                    <td>
+                      1.11
+                    </td>
+                    <td>
+                      1.11
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>Фильтры</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="form-group">
+            <label class="font-normal">Временной диапазон:</label>
+            <div id="reportrange" class="form-control">
+              <i class="fa fa-calendar"></i>
+              <span></span> <b class="caret"></b>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Конфигурация:</label>
+            <div>
+              <select multiple data-placeholder="Выбери" class="select2_demo_1 form-control">
+                <option value="1">Option 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">История:</label>
+            <div>
+              <select multiple class="select2_demo_1 form-control">
+                <option value="1">Option 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Паттерны:</label>
+            <div>
+              <select multiple class="select2_demo_1 form-control">
+                <option value="1">Option 1</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <div class="form-group">
+            <label class="font-normal">Наибольший Call/Put:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Процент Call к Put</option>
+                <option value="1">Процент Put к Call</option>
+                <option value="1">Значение Call/Put</option>
+                <option value="1">Значение Put/Call</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Сортировка времени:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Убывающая</option>
+                <option value="1">Возрастающая</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Сорт. по макс. знач. тиков:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Убывающая</option>
+                <option value="1">Возрастающая</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Сорт. по сред. знач. тиков:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Убывающая</option>
+                <option value="1">Возрастающая</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Сорт. по тренду:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Наибольший Call</option>
+                <option value="1">Наибольший Put</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Сорт. по кол. прогнозов:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Убывающая</option>
+                <option value="1">Возрастающая</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Сорт. по кол. сигналов:</label>
+            <div>
+              <select class="select2_demo_1 form-control">
+                <option value="" selected>Без сортировки</option>
+                <option value="1">Убывающая</option>
+                <option value="1">Возрастающая</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font-normal">Показывать:</label>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="checkbox checkbox-success checkbox-inline">
+                  <input type="checkbox" value="option1" checked="">
+                  <label class="filter-label"> Включенные </label>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="checkbox checkbox-danger checkbox-inline">
+                  <input type="checkbox" value="option1" checked="">
+                  <label class="filter-label"> Отключенные </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-info btn-outline" style="width: 100%">Сбросить фильтры</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

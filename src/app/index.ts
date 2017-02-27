@@ -14,6 +14,10 @@ import {Form as ConfiguratorForm} from './panel/configurator/form/form'
 import {List as AnalyzerList} from './panel/analyzer/list/list';
 import {View as AnalyzerView} from './panel/analyzer/view/view';
 
+import {Signals} from './panel/signals/signals';
+import {Patterns} from './panel/patterns/patterns'
+import {Predictions} from './panel/predictions/predictions'
+
 export const APP_DECLARATIONS: any[] = [
   Panel,
   Leftmenu,
@@ -25,5 +29,8 @@ export const APP_DECLARATIONS: any[] = [
   ConfiguratorList,
   ConfiguratorForm,
   AnalyzerList,
-  AnalyzerView
+  AnalyzerView,
+  Signals,
+  Patterns,
+  Predictions
 ];

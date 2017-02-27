@@ -10,6 +10,9 @@ import {Form as ConfiguratorForm} from './app/panel/configurator/form/form';
 import {List as AnalyzerList} from './app/panel/analyzer/list/list';
 import {View as AnalyzerView} from './app/panel/analyzer/view/view';
 
+import {Signals} from './app/panel/signals/signals';
+import {Patterns} from './app/panel/patterns/patterns'
+import {Predictions} from './app/panel/predictions/predictions'
 
 export const routes: Routes = [
   {path: '', component: Login},
@@ -36,7 +39,10 @@ export const routes: Routes = [
         {path: 'view/:config/:scope', component: AnalyzerView},
         {path: '**', component: AnalyzerList},
       ]
-      }
+      },
+      {path: 'signals', component: Signals},
+      {path: 'patterns', component: Patterns},
+      {path: 'predictions', component: Predictions},
     ]
   },
   {path: '**', component: Login},
