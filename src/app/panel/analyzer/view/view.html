@@ -1,0 +1,342 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>Анализ истории</h2>
+    <ol class="breadcrumb">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a>App Views</a>
+      </li>
+      <li class="active">
+        <strong>Clients</strong>
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-2">
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>Действия</h5>
+          <div class="pull-right">
+            <button type="button" class="btn btn-xs btn-primary btn-outline">
+              Запустить <i class="fa fa-play"></i>
+            </button>
+            <button type="button" class="btn btn-xs btn-success">
+              Скопировать в реалтайм анализатор <i class="fa fa-copy"></i>
+            </button>
+            <button type="button" class="btn btn-xs btn-danger">
+              Очистить сигналы и паттерны анализа <i class="fa fa-trash-o"></i>
+            </button>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <div class="row">
+            <div class="col-sm-4">
+              <h5>Диапазон сканирования</h5>
+              <div id="reportrange" class="form-control">
+                <i class="fa fa-calendar"></i>
+                <span></span> <b class="caret"></b>
+              </div>
+            </div>
+          </div>
+          <div class="row animated fadeIn">
+            <hr>
+            <div class="col-sm-12">
+              <h4>Состояние сканирования:
+                <span class="label label-primary">Идет анализ</span>
+              </h4>
+              <div class="col-sm-6">
+                <span class="text text-success">Собрано 40% (258 из 2034)</span>
+              </div>
+              <div class="col-sm-6">
+                <div class="progress progress-striped active">
+                  <div style="width: 40%" role="progressbar" class="progress-bar progress-bar-success"></div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <span class="text text-info">Обработано 40% (258 из 2034)</span>
+              </div>
+              <div class="col-sm-6">
+                <div class="progress progress-striped active">
+                  <div style="width: 40%" class="progress-bar progress-bar-info"></div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <span class="text text-danger">Сигналов реализовано</span>
+              </div>
+              <div class="col-sm-6">
+                <span class="label label-danger">765</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row animated fadeIn">
+    <div class="col-sm-12">
+      <div class="ibox">
+        <div class="ibox-title">
+          <h5>График и результаты</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="flot-chart">
+                <div class="flot-chart-content" id="flot-dashboard5-chart"
+                     style="padding: 0px; position: relative;"></div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="row m-t-xs">
+                <div class="col-xs-6">
+                  <h5 class="m-b-xs">Баланс тиков</h5>
+                  <h1 class="no-margins">160,000</h1>
+                  <div class="font-bold text-navy">98% <i class="fa fa-bolt"></i> профит</div>
+                </div>
+                <div class="col-xs-6">
+                  <h5 class="m-b-xs">Сигналов</h5>
+                  <h1 class="no-margins">42,120</h1>
+                  <div class="font-bold text-navy">98% <i class="fa fa-bolt"></i> профит</div>
+                </div>
+              </div>
+              <table class="table small m-t-sm">
+                <tbody>
+                <tr>
+                  <td>
+                    <strong>142</strong> Лучший сигнал
+                  </td>
+                  <td>
+                    <strong>22</strong> Успешных
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>61</strong> Худший сигнал
+                  </td>
+                  <td>
+                    <strong>54</strong> Убытычных
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>154</strong> Сред. сигнал
+                  </td>
+                  <td>
+                    <strong>32</strong> Нейтральных
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row animated fadeIn">
+    <div class="col-sm-8">
+      <div class="ibox">
+        <div class="ibox-content">
+          <span class="text-muted small pull-right">Актуально на: <i class="fa fa-clock-o"></i> 2:10 pm - 12.06.2014</span>
+          <h2>Данные анализа</h2>
+          <div class="pull-right">
+            <button class="btn btn-outline btn-xs btn-link"><i class="fa fa-remove"></i> Сбросить</button>
+          </div>
+          <p>
+            Фильтры применяются к данным только этого анализа за интервал времени
+          </p>
+          <div class="float-e-margins">
+            <div class="btn-group">
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-asc"></i> Call/Put</button>
+              <button class="btn btn-outline btn-xs btn-danger"><i class="fa fa-sort-asc"></i> Put/Call</button>
+              <button class="btn btn-outline btn-xs btn-primary">Δ Call к Put</button>
+              <button class="btn btn-outline btn-xs btn-danger">Δ Put к Call</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-numeric-desc"></i> Время
+              </button>
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-numeric-asc"></i> Время
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-numeric-desc"></i> Тики
+              </button>
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-numeric-asc"></i> Тики
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-asc"></i> Call тренд
+              </button>
+              <button class="btn btn-outline btn-xs btn-danger"><i class="fa fa-sort-asc"></i> Put тренд
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-numeric-desc"></i> сигналы
+              </button>
+              <button class="btn btn-outline btn-xs btn-primary"><i class="fa fa-sort-numeric-asc"></i> сигналы
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-outline btn-xs btn-danger">Отключенные</button>
+              <button class="btn btn-outline btn-xs btn-primary active">Включенные</button>
+            </div>
+          </div>
+          <div>
+            <ul class="nav nav-tabs">
+              <span class="pull-right small text-muted">1406 Элементов</span>
+              <li class="active"><a data-toggle="tab" href="#patterns" aria-expanded="true"><i
+                class="fa fa-user"></i>
+                Паттерны</a></li>
+              <li class=""><a data-toggle="tab" href="#signals" aria-expanded="false"><i
+                class="fa fa-briefcase"></i>
+                Сигналы</a></li>
+            </ul>
+            <div class="tab-content">
+              <div id="patterns" class="tab-pane active">
+                <table class="table table-striped table-hover">
+                  <thead>
+                  <th>#</th>
+                  <th>Seq.</th>
+                  <th>Длит.</th>
+                  <th>Прогнозов</th>
+                  <th>Сигналов</th>
+                  <th>Действия</th>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><a href="javascript:return false">32423</a></td>
+                    <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                    <td>800c</td>
+                    <td><span class="text-navy">2<i class="fa fa-level-up"></i></span>/<span class="text-danger">2<i class="fa fa-level-down"></i></span></td>
+                    <td>8</td>
+                    <td><i class="fa fa-remove pointer"></i></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="signals" class="tab-pane">
+                <div class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Seq.</th>
+                      <th>Патт.</th>
+                      <th>Длит.</th>
+                      <th>Просадка</th>
+                      <th>Тиков</th>
+                      <th>Результат</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><span class="line">5,3,2,-1,-3,-2,2,3,5,2</span></td>
+                      <td><a href="javascript:return false">32423</a></td>
+                      <td>360c</td>
+                      <td class="text-danger">2 <i class="fa fa-level-down"></i></td>
+                      <td class="text-navy">2 <i class="fa fa-level-up"></i></td>
+                      <td><i class="fa fa-check text-navy"></i></td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="ibox">
+        <div class="ibox-content">
+          Выберите паттерн
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="ibox">
+        <div class="ibox-title">
+          <div class="pull-right">
+            <i class="fa fa-close pointer" style="margin-top: 6px;"></i>
+          </div>
+          <h4>Паттерн #12324</h4>
+        </div>
+        <div class="ibox-content">
+          <div class="tab-content">
+            <div class="row m-b-lg">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div id="sparkline1">
+                    <canvas></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <h5 class="m-b-xs">Баланс тиков</h5>
+                    <h1 class="no-margins">160,000</h1>
+                  </div>
+                  <div class="col-xs-6">
+                    <h5 class="m-b-xs">Прогнозов</h5>
+                    <h1 class="no-margins">42,120</h1>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <hr>
+                    <h4>Прогнозы</h4>
+                    <table class="table small m-t-sm">
+                      <tbody>
+                      <tr>
+                        <td>
+                          <strong>142</strong> Лучший
+                        </td>
+                        <td>
+                          <strong>22</strong> Успешных
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>61</strong> Худший
+                        </td>
+                        <td>
+                          <strong>54</strong> Убытычных
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>154</strong> Средний
+                        </td>
+                        <td>
+                          <strong>32</strong> Нейтральных
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="pull-right">
+                      <button class="btn btn-success btn-outline btn-rounded btn-xs">
+                        Просмотреть прогнозы паттерна <i class="fa fa-mail-forward"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
